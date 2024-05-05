@@ -320,7 +320,7 @@ function Header() {
               <Grid item xs={3} display={'flex'} justifyContent={'end'}>
 
                 <IconButton onClick={handleClosePersonalAccToggle} color="primary" aria-label="add to shopping cart">
-                  <CloseIcon sx={{height:50,width:50}}/>
+                  <CloseIcon />
                 </IconButton>
               </Grid>
 

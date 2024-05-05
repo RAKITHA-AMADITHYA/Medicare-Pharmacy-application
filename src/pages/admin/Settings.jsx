@@ -26,7 +26,7 @@ const Settings = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575', // Set the border color
+                      // borderColor: '#757575', // Set the border color
                     }
                   }}
                 />
@@ -48,7 +48,7 @@ const Settings = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -69,7 +69,7 @@ const Settings = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -91,7 +91,7 @@ const Settings = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -113,7 +113,7 @@ const Settings = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -135,7 +135,7 @@ const Settings = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -157,7 +157,7 @@ const Settings = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -181,7 +181,7 @@ const Settings = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
