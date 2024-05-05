@@ -6,7 +6,7 @@ const ContainerForm = (props) => {
     <Grid container justifyContent="center" alignItems="center" >
         <Box
     sx={{
-      backgroundColor: '#f5f5f5',
+      backgroundColor: 'white',
       borderRadius: 2,
       boxshadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
       display: 'flex',

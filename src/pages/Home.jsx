@@ -17,7 +17,7 @@ import siddha from '../assets/images/sidda2.jpeg';
 
 
 const Home = () => {
-  
+
 
   return (
     <div>
@@ -29,51 +29,48 @@ const Home = () => {
               Consult Top Pharmacists Online
             </Typography>
             <Typography variant='h6' sx={{ mt: 3 }} fontWeight={300} color={'#185FA0'} fontFamily={`poppins`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi
-              repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat
+
+              "Discover a modern pharmacy experience online, where convenience meets care. Browse a wide range of pharmaceutical products, order prescriptions, and receive expert advice, all from the comfort of your home. Stay healthy, effortlessly."
+
             </Typography>
-            <Grid item mt={5}>
-              <Button sx={{ width: '200px', height: '50px', fontSize: '16px' }} variant='outlined'>
-                Upload Prescription
-              </Button>
-            </Grid>
+
           </Grid>
-          <Grid item lg={5} xl={5} display={'flex'} justifyContent={'start'} p={2}>
-            <img src={Landingimg} width={'75%'} alt='' />
+          <Grid item lg={5} xl={5} display={'flex'} justifyContent={'center'} p={2}>
+            <img src={Landingimg} width={'70%'} alt='' />
           </Grid>
         </Grid>
-        
-{/* Logo container */}
-        <Grid container p={2} bgcolor={'white'}>
-          <Grid item lg={2}>
-          <img src={download} width={'40%'} alt='' />
+
+        {/* Logo container */}
+        <Grid container bgcolor={'white'} height={'05vh'}>
+          <Grid item lg={2} display={'flex'} justifyContent={'center'}>
+            <img src={download} width={'40%'} alt='' />
 
           </Grid>
-          <Grid item lg={2}>
-          <img src={download2} width={'40%'} alt='' />
+          <Grid item lg={2} display={'flex'} justifyContent={'center'}>
+            <img src={download2} width={'40%'} alt='' />
 
           </Grid>
-          <Grid item lg={2}>
-          <img src={Lankahospitals} width={'40%'} alt='' />
+          <Grid item lg={2} display={'flex'} justifyContent={'center'}>
+            <img src={Lankahospitals} width={'40%'} alt='' />
 
           </Grid>
-          <Grid item lg={2}>
-          <img src={NinewellsLogo} width={'40%'} alt='' />
+          <Grid item lg={2} display={'flex'} justifyContent={'center'}>
+            <img src={NinewellsLogo} width={'40%'} alt='' />
 
           </Grid>
-          <Grid item lg={2}>
-          <img src={hemas} width={'40%'} alt='' />
+          <Grid item lg={2} display={'flex'} justifyContent={'center'}>
+            <img src={hemas} width={'40%'} alt='' />
 
           </Grid>
-          <Grid item lg={2}>
-          <img src={siddha} width={'50%'} alt='' />
+          <Grid item lg={2} display={'flex'} justifyContent={'center'}>
+            <img src={siddha} width={'50%'} alt='' />
 
           </Grid>
 
         </Grid>
 
       </section>
-     
+
       {/* Section 2 */}
       {/*  */}
 

@@ -5,15 +5,13 @@ import CloseIcon from '@mui/icons-material/Close';
 import inhailer from '../../assets/images/inhailer.png';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import Logo from '../../assets/images/medeclinic.png';
+import Logo from '../../assets/images/medicare1.png';
+import { Link } from 'react-router-dom';
 
-const ItemCard = ({ img }) => {
+
+const ItemCard = ({ img ,category,rating,name,price,disabled,active}) => {
   const [openModal, setOpenModal] = useState(false);
-  const [modalData, setModalData] = useState({
-    name: 'SEROFLO-125 INHALER',
-    price: 'LKR 650/=',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar pretium metus, at scelerisque est pellentesque sed.'
-  });
+  // 
 
   const handleOpenModal = () => {
     setOpenModal(true);
@@ -22,27 +20,32 @@ const ItemCard = ({ img }) => {
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+  const handleLink = () => {
+<Link to={'/user/buy-now'}/>
+
+};
 
   return (
     <div>
-      <Card sx={{ borderRadius: 2, boxShadow: 3 }}>
+      <Card sx={{ borderRadius: 2, boxShadow: 3,minHeight:'250px',maxHeight:'250px' }}>
         <div>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src={img} width={'120px'} alt="" />
+            <img src={img} width={'50%'} alt="" />
           </div>
           <div style={{
             display: 'flex', justifyContent: 'space-between',
-            margin: 5, borderTopRightRadius: 5, borderTopLeftRadius: 5, color: '#455a64'
+            margin: 5, borderTopRightRadius: 5, borderTopLeftRadius: 5, color: '#455a64',padding:2
           }}>
-            <h5>Medicine</h5>
-            <h5>⭐(4.5)</h5>
+            
+            <h5>{category}</h5>
+            <h5>⭐({rating})</h5>
           </div>
           <div style={{ display: 'flex', margin: 5, color: '#455a64' }}>
-            <h4>{modalData.name}</h4>
+            <h4>{name}</h4>
           </div>
           <div style={{ display: 'flex', margin: 5, justifyContent: 'space-between', color: '#455a64' }}>
-            <h3 style={{ marginTop: 5 }}>{modalData.price}</h3>
-            <Fab color="" aria-label="add" style={{ width: '40px', height: '30px' }} onClick={handleOpenModal}>
+            <h2 style={{ marginTop: 5,color:'#28aadc' }}>{price}<span style={{fontSize:15,color:'red'}}> {active}</span> </h2>
+            <Fab disabled={disabled} bg="#e3f0ff" aria-label="add" style={{ width: '40px', height: '30px' }} onClick={handleOpenModal}>
               <AddShoppingCartIcon />
             </Fab>
           </div>
@@ -58,7 +61,7 @@ const ItemCard = ({ img }) => {
 
           <div style={{ display: 'flex',justifyContent:'space-between'}}>
             <img src={Logo} width={"20%"} alt="" />
-            <Fab color="" aria-label="add" style={{ width: '40px', height: '30px' }} onClick={handleCloseModal}>
+            <Fab color=""  aria-label="add" style={{ width: '40px', height: '30px' }} onClick={handleCloseModal}>
               <CloseIcon />
             </Fab>
           </div>
@@ -74,7 +77,7 @@ const ItemCard = ({ img }) => {
 
 
 
-              <Typography variant='h3' color={'#fd384f'}>LKR 650/=</Typography>
+              <Typography variant='h3' color={'#28AADC'}>LKR 650/=</Typography>
               <Typography variant='p' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
                 molestiae quas vel sint commodi repudiandae consequunturMaxime mollitia,
                 molestiae quas vel sint commodi repudiandae consequuntur</Typography>
@@ -107,10 +110,11 @@ const ItemCard = ({ img }) => {
 
 
               {/* </div> */}
-              <div style={{ width: '100%', display: 'flex', marginTop: 25, gap: 5 }}>
-                <Button variant="outlined">Add to Cart</Button>
-                <Button variant="contained">Buy Now</Button>
-
+              <div style={{ width: '100%', display: 'flex', marginTop: 25,justifyContent:'start',gap:5}}>
+                <Button full variant="outlined" onClick={handleCloseModal}>Add to Cart</Button>
+                <Link to={'/user/buy-now'}  >
+                <Button fullWidth variant="contained">Buy Now</Button>
+</Link>
 
               </div>
 

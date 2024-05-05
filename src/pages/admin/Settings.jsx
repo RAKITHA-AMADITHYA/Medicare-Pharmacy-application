@@ -2,7 +2,7 @@ import React from 'react'
 import ContainerForm from '../../components/ContainerForm/ContainerForm'
 import { Button, Divider, Grid, TextField, Typography } from '@mui/material'
 
-const MyAccount = () => {
+const Settings = () => {
     return (
         <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'80vh'}}>
             <ContainerForm>
@@ -26,6 +26,7 @@ const MyAccount = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#757575', // Set the border color
                     }
                   }}
                 />
@@ -47,6 +48,7 @@ const MyAccount = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#757575',
                     },
                   }}
                 />
@@ -67,6 +69,7 @@ const MyAccount = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#757575',
                     },
                   }}
                 />
@@ -88,6 +91,7 @@ const MyAccount = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#757575',
                     },
                   }}
                 />
@@ -109,6 +113,7 @@ const MyAccount = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#757575',
                     },
                   }}
                 />
@@ -130,6 +135,7 @@ const MyAccount = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#757575',
                     },
                   }}
                 />
@@ -151,6 +157,7 @@ const MyAccount = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#757575',
                     },
                   }}
                 />
@@ -174,6 +181,7 @@ const MyAccount = () => {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#757575',
                     },
                   }}
                 />
@@ -205,4 +213,4 @@ const MyAccount = () => {
     )
 }
 
-export default MyAccount
+export default Settings

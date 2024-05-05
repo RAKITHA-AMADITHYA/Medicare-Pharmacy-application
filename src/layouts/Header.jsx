@@ -1,17 +1,12 @@
 
 
-import React, { useState } from 'react';
-import { Box, Grid, Badge, Popover, Button, Typography, MenuItem, Modal, Backdrop, Fade, TextField, IconButton, Select, styled, FormControlLabel, Checkbox, Drawer } from "@mui/material";
-import { Link } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
-import Logo from '../assets/images/medeclinic.png';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-// import MenuIcon from '@mui/icons-material/Menu';
-import loginimg from '../assets/images/LPI.png'
-import shadow from '../assets/images/shadow2.png'
-import shadow2 from '../assets/images/shadow3.png'
+import { Backdrop, Box, Button, Checkbox, Fade, FormControlLabel, Grid, IconButton, Modal, TextField, Typography, styled } from "@mui/material";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../assets/images/medicare1.png';
+import loginimg from '../assets/images/LPI.png';
+import shadow from '../assets/images/shadow2.png';
 
 
 
@@ -122,156 +117,22 @@ function Header() {
     >
       <Grid container p={1}>
         {/* Logo */}
-        <Grid item xs={11} sm={11} md={2} lg={2} xl={2} display={'flex'} justifyContent={'center'} alignItems={'center'} >
+        <Grid item xs={11} md={9} display={'flex'} justifyContent={'start'} alignItems={'center'} >
           <Link to="/">
-            <img src={Logo} width={'70%'} alt="" />
+            <img src={Logo} width={'30%'} alt="" />
           </Link>
         </Grid>
 
 
-        <Grid item xs={1} sm={1} md={1} display={{ xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }} justifyContent={'center'} alignItems={'center'}>
-          <Badge color="primary">
-            {/* <MenuIcon color="action" onClick={handleClick} /> */}
-          </Badge>
+
+
+
+
+        <Grid item md={3} display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} spacing={2} >
+          <Button variant="outlined" onClick={handleLoginToggle} fullWidth  sx={{ marginRight: 2 }} >Login</Button>
+          <Button variant="contained" fullWidth onClick={handlePersonalAccToggle}>Signup</Button>
         </Grid>
 
-        {/* NAv Links */}
-        <Grid item md={8} lg={8} xl={8} display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} p={1} justifyContent={'center'}  >
-          <Grid container display={'flex'} justifyContent={'center'} spacing={4}>
-            {/* Home */}
-            <Grid item  >
-              <Typography
-                variant='subtitle1'
-                fontWeight={600}
-                color={'#185fa0'}
-                sx={{ cursor: 'pointer' }}
-              // onClick={handleClick}
-              >
-                Home
-              </Typography>
-
-            </Grid>
-
-            {/* Services */}
-            <Grid item  >
-              <Typography
-                variant='subtitle1'
-                fontWeight={600}
-                color={'#185fa0'}
-                sx={{ cursor: 'pointer' }}
-              // onClick={handleClick}
-              >
-                Services
-              </Typography>
-              <Popover
-                open={Boolean(anchorEl)}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
-                }}
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'center',
-                }}
-                PaperProps={{
-                  sx: {
-                    width: '600px', // Set custom width
-                    maxHeight: '300px', // Set custom max height
-                  },
-                }}
-              >
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 1</MenuItem>
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 2</MenuItem>
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 3</MenuItem>
-              </Popover>
-            </Grid>
-
-
-
-            {/* About Us */}
-            <Grid item  >
-              <Typography
-                variant='subtitle1'
-                fontWeight={600}
-                color={'#185fa0'}
-                sx={{ cursor: 'pointer' }}
-              // onClick={handleClick}
-              >
-                About Us
-              </Typography>
-              <Popover
-                open={Boolean(anchorEl)}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
-                }}
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'center',
-                }}
-                PaperProps={{
-                  sx: {
-                    width: '600px', // Set custom width
-                    maxHeight: '300px', // Set custom max height
-                  },
-                }}
-              >
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 1</MenuItem>
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 2</MenuItem>
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 3</MenuItem>
-              </Popover>
-            </Grid>
-            {/* Contact */}
-            <Grid item >
-              <Typography
-                variant='subtitle1'
-                fontWeight={600}
-                color={'#185fa0'}
-                sx={{ cursor: 'pointer' }}
-              // onClick={handleClick}
-              >
-                Contact
-              </Typography>
-              <Popover
-                open={Boolean(anchorEl)}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
-                }}
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'center',
-                }}
-                PaperProps={{
-                  sx: {
-                    width: '600px', // Set custom width
-                    maxHeight: '300px', // Set custom max height
-                  },
-                }}
-              >
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 1</MenuItem>
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 2</MenuItem>
-                <MenuItem onClick={handleClose} component={Link} to="/Services">Submenu 3</MenuItem>
-              </Popover>
-            </Grid>
-
-          </Grid>
-        </Grid>
-
-        <Grid item md={2} lg={2} xl={2} display={{ xs: 'none', sm: 'none', md: 'flex', lg: 'flex' }} justifyContent={'center'} spacing={2}>
-          <Box sx={{ display: 'flex', gap: 2 }}>
-
-            <Button variant="contained" fullWidth onClick={handlePersonalAccToggle}>Signup</Button>
-            <Button variant="outlined" onClick={handleLoginToggle} fullWidth >Login</Button>
-
-          </Box>
-        </Grid>
 
 
       </Grid>
@@ -323,7 +184,7 @@ function Header() {
 
               {/* Modal content */}
               <Grid item xs={11} sm={11} md={5} lg={5} xl={5} display={'flex'} justifyContent={'center'} alignContent={'center'} >
-             
+
                 <Box sx={{ backgroundColor: '#eceff1', borderRadius: 2, padding: 2, width: '100%' }} >
                   <Grid item display={'flex'} justifyContent={'center'} flexDirection={'column'} >
 
@@ -395,24 +256,13 @@ function Header() {
 
 
 
-
-                    <Button variant="contained" sx={{
-                      mt: 2, '&:hover': { backgroundColor: 'primary.main' },
-                      fontSize: { xs: '17px', sm: '17px', md: '17px', lg: '14px', xl: '23px' }
-                    }} onClick={handleOtpToggle}>Login</Button>
-
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} flexDirection={'column'} display={'flex'} textAlign={'center'} mt={1}>
-                      <Typography variant="subtitle1" color="primary" sx={{ mt: 2 }}>
-                        <Typography variant='h6' sx={{ fontSize: { xs: '15px', sm: '15px', md: '15px', lg: '15px', xl: '15px' }, fontWeight: 600 }}>
-                          Don’t have an account?{' '}
-                          <span style={{ color: '#0070C0', cursor: 'pointer' }} onClick={handleLoginSignupToggle}>
-                            Register here
-                          </span>
-                        </Typography>
-                      </Typography>
+                    <Link to={"/user/dashboard"}>
+                      <Button fullWidth variant="contained" sx={{
+                        mt: 5, '&:hover': { backgroundColor: 'primary.main' },
+                        fontSize: { xs: '17px', sm: '17px', md: '17px', lg: '14px', xl: '23px' }
+                      }} >Login</Button></Link>
 
 
-                    </Grid>
 
 
 
@@ -427,7 +277,7 @@ function Header() {
       </Modal>
 
 
-      {/* Personal account register  Modal */}
+      {/*  register  Modal */}
       <Modal
         open={personalAcc}
         onClose={handleOtpToggle}
@@ -462,15 +312,15 @@ function Header() {
             }}
           >
             <Grid container>
-              <Grid item xs={11} sm={11} md={11} lg={11} xl={11}>
+              <Grid item xs={9} >
                 <img src={Logo} width={'20%'} alt="" />
               </Grid>
 
 
-              <Grid item xs={1} sm={1} md={1} lg={1} xl={1} display={'flex'} justifyContent={'end'}>
+              <Grid item xs={3} display={'flex'} justifyContent={'end'}>
 
                 <IconButton onClick={handleClosePersonalAccToggle} color="primary" aria-label="add to shopping cart">
-                  <CloseIcon />
+                  <CloseIcon sx={{height:50,width:50}}/>
                 </IconButton>
               </Grid>
 
@@ -500,7 +350,7 @@ function Header() {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575', // Set the border color
+                      // borderColor: '#757575', // Set the border color
                     }
                   }}
                 />
@@ -522,7 +372,7 @@ function Header() {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -543,7 +393,7 @@ function Header() {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -565,7 +415,7 @@ function Header() {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -588,7 +438,7 @@ function Header() {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -611,7 +461,7 @@ function Header() {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -634,7 +484,7 @@ function Header() {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
+                      // borderColor: '#757575',
                     },
                   }}
                 />
@@ -659,7 +509,6 @@ function Header() {
                       height: '35px', // Set the desired height
                     },
                     '& .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#757575',
                     },
                   }}
                 />
@@ -676,10 +525,11 @@ function Header() {
 
               {/* Submit btn */}
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12} flexDirection={'column'} display={'flex'} justifyContent={'end'} alignItems={'end'}>
+
                 <Button
                   variant="contained"
                   disableElevation
-                  onClick={handleLinkClick}
+                  onClick={handleClosePersonalAccToggle}
 
                   sx={{
                     '&:hover': {

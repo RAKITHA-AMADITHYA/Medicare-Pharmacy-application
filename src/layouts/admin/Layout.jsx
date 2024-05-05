@@ -3,7 +3,6 @@ import Header from './Header';
 import Sidebar from './SideBar';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import InsideHeader from './InsideHeader';
 
 function Layout() {
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -20,13 +19,6 @@ function Layout() {
       document.removeEventListener('fullscreenchange', handleFullScreenChange);
     };
   }, []);
-
-  // Check if the current path is MyAccount
-  const isMyAccountPage = location.pathname.includes('/user/my-account');
-  const isMyOrderPage = location.pathname.includes('/user/my-order');
-  const isPrescriptionPage = location.pathname.includes('/user/prescription');
-  const isUploadPrescriptionPage = location.pathname.includes('/user/prescription/upload');
-  const isBuyNowPage = location.pathname.includes('/user/buy-now');
 
 
 
@@ -50,12 +42,8 @@ function Layout() {
             display: 'block',
           }}
         >
-          {/* Conditionally render InsideHeader */}
-          {!isMyAccountPage && !isPrescriptionPage && !isBuyNowPage&& !isUploadPrescriptionPage && !isMyOrderPage &&(
-            <Box sx={{ display: 'block' }}>
-              <InsideHeader />
-            </Box>
-          )}
+          
+          
           <Outlet />
         </Box>
       </Box>

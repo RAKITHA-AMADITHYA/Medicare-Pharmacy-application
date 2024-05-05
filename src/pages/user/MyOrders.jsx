@@ -1,8 +1,7 @@
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow } from '@mui/material';
 import React, { useState } from 'react';
-import { Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, TextField, Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import inhailer from '../../assets/images/inhailer.png';
-import { Margin } from '@mui/icons-material';
 
 const MyOrders = () => {
 
@@ -34,7 +33,7 @@ const MyOrders = () => {
 
 
     return (
-        <div div style={{padding:10}}>
+        <div div style={{padding:20}}>
             <TableContainer component={Paper} sx={{ mt: 2 }}>
                 <Table>
                     <TableHead>

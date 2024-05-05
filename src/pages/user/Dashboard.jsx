@@ -1,24 +1,19 @@
 import React from 'react';
-import Slider from 'react-slick';
-import Card from '../../components/ContentCard/Card3';
-import Heart from '../../assets/images/heart4.png';
-import ent from '../../assets/images/ear2.png';
-import eye from '../../assets/images/eye3.png';
-import device from '../../assets/images/items.png';
-import baby from '../../assets/images/baby2.png';
-import vita from '../../assets/images/vita2.png';
-import nurology from '../../assets/images/brain.png';
-import firstaid from '../../assets/images/firstaid1.png';
-
-import skin from '../../assets/images/skin3.png';
-import inhailer from '../../assets/images/inhailer.png';
 import { Grid } from '@mui/material';
-import ItemCard from '../../components/ContentCard/ItemCard';
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import inhailer from '../../assets/images/inhailer.png';
+import eyemed from '../../assets/images/eyeMed2.jpg';
+import entmed from '../../assets/images/entmed.jpg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Banner1 from '../../assets/images/banner2.jpg'
 import Banner2 from '../../assets/images/banner3.png'
 import Banner3 from '../../assets/images/banner4.png'
+
+
+import ItemCard from '../../components/ContentCard/ItemCard';
+import Slider from 'react-slick';
 
 
 
@@ -61,7 +56,11 @@ const Dashboard = () => {
   };
 
   return (
-    <>      <div style={{overflowX:'hidden',overflowY:'hidden'}}>
+    <>   
+    
+      
+
+    <div style={{overflowX:'hidden',overflowY:'hidden'}}>
         <Slider  {...settings}>
           <div> <img src={Banner1} alt="" /></div>
           <div> <img src={Banner3} alt="" /></div>
@@ -75,55 +74,62 @@ const Dashboard = () => {
         </Slider>
       </div>
 
-      <div style={{
-        padding: 20, display: 'flex', gap: 10, maxWidth: '100vw', overflowX: 'auto ',
-        scrollbarWidth: 'none', msOverflowStyle: 'none', /* Internet Explorer 10+ */
-        '&::-webkit-scrollbar': {
-          display: 'none',
-        }
-      }}>
-        <Card img={nurology} name="Neurology" color="#fed1de" w='80' />
-        <Card img={ent} name="ENT" color="#f0dafc" w='108' />
-        <Card img={eye} name="Eye" color="#fed1de" w='80' />
-        <Card img={Heart} name="Heart" color="#e3f0ff" w='65' />
-        <Card img={device} name="Health Devices" color="#fed1de" w='80' />
-        <Card img={baby} name="Baby Items" color="#f0dafc" w='75' />
-        <Card img={vita} name="Vitamins" color="#e3f0ff" w='78' />
-        <Card img={skin} name="Skin Care" color="#fed1de" w='80' />
-        <Card img={firstaid} name="First Aid" color="#f0dafc" w='80' />
-
-      </div>
+      
+       
 
 
 
 
       <Grid container p={3} spacing={2}>
         <Grid item md={3}>
-          <ItemCard img={inhailer} />
+          <ItemCard img={inhailer} category="Heart"rating="4.5" name="SEROFLO-125 INHALER"price="650/=" />
         </Grid>
         <Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
-        </Grid><Grid item md={3}>
-          <ItemCard img={inhailer} />
+          <ItemCard img={eyemed} category="Eye"rating="4.5" name="p-acuvail-eye-drops" disabled="true" active="Out of stock"/>
         </Grid>
+        <Grid item md={3}>
+          <ItemCard img={entmed} category="Ent"rating="4.5" name="flutimate-nasal-spray" disabled="true" active="Out of stock" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={entmed} category="Ent"rating="4.5" name="flutimate-nasal-spray"price="1103/=" />
+        </Grid>
+
+
+        <Grid item md={3}>
+          <ItemCard img={inhailer} category="Heart"rating="4.5" name="SEROFLO-125 INHALER"price="650/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={eyemed} category="Eye"rating="4.5" name="p-acuvail-eye-drops"price="167/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={entmed} category="Ent"rating="4.5" name="flutimate-nasal-spray"price="1103/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={entmed} category="Ent"rating="4.5" name="flutimate-nasal-spray"price="1103/=" />
+        </Grid> <Grid item md={3}>
+          <ItemCard img={inhailer} category="Heart"rating="4.5" name="SEROFLO-125 INHALER"price="650/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={eyemed} category="Eye"rating="4.5" name="p-acuvail-eye-drops"price="167/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={entmed} category="Ent"rating="4.5" name="flutimate-nasal-spray"price="1103/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={entmed} category="Ent"rating="4.5" name="flutimate-nasal-spray"price="1103/=" />
+        </Grid> <Grid item md={3}>
+          <ItemCard img={inhailer} category="Heart"rating="4.5" name="SEROFLO-125 INHALER"price="650/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={eyemed} category="Eye"rating="4.5" name="p-acuvail-eye-drops"price="167/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={entmed} category="Ent"rating="4.5" name="flutimate-nasal-spray"price="1103/=" />
+        </Grid>
+        <Grid item md={3}>
+          <ItemCard img={entmed} category="Ent"rating="4.5" name="flutimate-nasal-spray"price="1103/=" />
+        </Grid>
+       
       </Grid>
     </>
   );
