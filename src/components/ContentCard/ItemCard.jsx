@@ -27,29 +27,38 @@ const ItemCard = ({ img ,category,rating,name,price,disabled,active}) => {
 
   return (
     <div>
-      <Card sx={{ borderRadius: 2, boxShadow: 3,minHeight:'250px',maxHeight:'250px' }}>
-        <div>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src={img} width={'50%'} alt="" />
-          </div>
-          <div style={{
-            display: 'flex', justifyContent: 'space-between',
-            margin: 5, borderTopRightRadius: 5, borderTopLeftRadius: 5, color: '#455a64',padding:2
-          }}>
-            
-            <h5>{category}</h5>
-            <h5>⭐({rating})</h5>
-          </div>
-          <div style={{ display: 'flex', margin: 5, color: '#455a64' }}>
-            <h4>{name}</h4>
-          </div>
-          <div style={{ display: 'flex', margin: 5, justifyContent: 'space-between', color: '#455a64' }}>
-            <h2 style={{ marginTop: 5,color:'#28aadc' }}>{price}<span style={{fontSize:15,color:'red'}}> {active}</span> </h2>
-            <Fab disabled={disabled} bg="#e3f0ff" aria-label="add" style={{ width: '40px', height: '30px' }} onClick={handleOpenModal}>
+      <Card sx={{ borderRadius: 2, boxShadow: 3,p:2}}>
+      
+
+        <Grid item display={'flex'} justifyContent={'center'}>
+        <img src={img} width={'100px'} alt="" />
+        
+
+        </Grid>
+        <Grid container>
+          <Grid item xs={9}>
+            <Typography variant='p' fontWeight={600}>{category}</Typography>
+          </Grid>
+          <Grid item xs={3} display={'flex'} justifyContent={'end'}>⭐{rating}</Grid>
+
+        </Grid>
+        <Grid item >
+            <Typography variant='subtitle2'>{name}</Typography>
+          </Grid>
+
+          <Grid container>
+          <Grid item xs={9}>
+          <Typography variant='h4' color={'red'}>{active}</Typography>
+
+            <Typography variant='h4' fontWeight={600}>{price}</Typography>
+          </Grid>
+          <Grid item xs={3} display={'flex'} justifyContent={'end'}>
+          <Fab disabled={disabled} bg="#e3f0ff" aria-label="add" style={{ width: '40px', height: '30px' }} onClick={handleOpenModal}>
               <AddShoppingCartIcon />
-            </Fab>
-          </div>
-        </div>
+            </Fab>            
+            </Grid>
+
+        </Grid>  
       </Card>
       <Modal
         open={openModal}
