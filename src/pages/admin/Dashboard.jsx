@@ -31,7 +31,7 @@ const Dashboard = () => {
     };
   }, []);
   return (
-    <div style={{ height: '100vh' }}>
+    <div style={{ height: '100%' }}>
       <Grid container p={3} spacing={2}>
         <TotalCountCard title="Customers" count="150" img={man} w={'50%'}/>
         <TotalCountCard title="Categories" count="10"  img={Category} w={'50%'}/>
