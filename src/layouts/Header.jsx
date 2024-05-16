@@ -266,12 +266,10 @@ function Header() {
 
 
 
-                    {/* <Link to={"/user/dashboard"}> */}
-                      <Button fullWidth variant="contained" sx={{
+                      <Button fullWidth variant="contained" onClick={handleClose} sx={{
                         mt: 5, '&:hover': { backgroundColor: 'primary.main' },
                         fontSize: { xs: '17px', sm: '17px', md: '17px', lg: '14px', xl: '23px' }
                       }} onClick={LoginBtnOnclick} >Login</Button>
-                      {/* </Link> */}
 
 
 
