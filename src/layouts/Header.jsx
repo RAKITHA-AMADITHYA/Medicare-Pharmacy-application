@@ -3,7 +3,7 @@
 import CloseIcon from '@mui/icons-material/Close';
 import { Backdrop, Box, Button, Checkbox, Fade, FormControlLabel, Grid, IconButton, Modal, TextField, Typography, styled } from "@mui/material";
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../assets/images/medicare1.png';
 import loginimg from '../assets/images/LPI.png';
 import shadow from '../assets/images/shadow2.png';
@@ -18,6 +18,7 @@ function Header() {
   const [personalAcc, setPersonalAcc] = useState(false);
   const [businessAcc, setBusinessAcc] = useState(false);
   const [loginSignup, setloginSignup] = useState(false);
+  const navigate = useNavigate();
 
   const [activeButton, setActiveButton] = useState('personal');
   const [anchorEl, setAnchorEl] = useState(null);
@@ -55,6 +56,10 @@ function Header() {
 
   const handleLoginToggle = () => {
     setLoginOpen(!loginOpen);
+  };
+
+  const handleLoginClose = () => {
+    setLoginOpen(false);
   };
 
   const handleCloseLoginToggle = () => {
@@ -108,6 +113,11 @@ function Header() {
   const handleLinkClick = () => {
     setOpen(false); // Close the sidebar when a link is clicked
   };
+
+  const LoginBtnOnclick=()=>{
+    handleLoginClose();
+    navigate( "/user/dashboard" )
+  }
 
   return (
     <Box
@@ -256,11 +266,12 @@ function Header() {
 
 
 
-                    <Link to={"/user/dashboard"}>
+                    {/* <Link to={"/user/dashboard"}> */}
                       <Button fullWidth variant="contained" sx={{
                         mt: 5, '&:hover': { backgroundColor: 'primary.main' },
                         fontSize: { xs: '17px', sm: '17px', md: '17px', lg: '14px', xl: '23px' }
-                      }} >Login</Button></Link>
+                      }} onClick={LoginBtnOnclick} >Login</Button>
+                      {/* </Link> */}
 
 
 

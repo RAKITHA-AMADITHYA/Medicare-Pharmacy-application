@@ -53,7 +53,7 @@ const MyOrders = () => {
                     </TableHead>
                     <TableBody>
                         {filteredOrders.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((orders) => (
-                            <TableRow key={orders.id} component={Link} to="/main/management/orders/info" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <TableRow key={orders.id} >
                                 <TableCell>  {orders.id} </TableCell>
                                 <TableCell>  <img src={orders.item} width={'20%'} alt="" /> </TableCell>
                                 <TableCell>{orders.itemName}</TableCell>

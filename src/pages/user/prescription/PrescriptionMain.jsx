@@ -71,7 +71,7 @@ const PrescriptionMain = () => {
             </TableHead>
             <TableBody>
               {filteredOrders.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((order) => (
-                <TableRow key={order.id} component={Link} to="/main/management/orders/info" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <TableRow key={order.id} >
                   <TableCell>{order.id}</TableCell>
                   <TableCell>{order.frequency}</TableCell>
                   <TableCell>{order.Fulfilment}</TableCell>

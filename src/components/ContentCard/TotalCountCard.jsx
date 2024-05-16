@@ -9,12 +9,13 @@ const TotalCountCard = ({ title, count, img, w, aline, h, mt, p, font }) => {
                 <Card sx={{
                     backgroundColor: "#4184c6",
                     width: "100%",
+                    height:'120px',
                     transition: 'box-shadow 0.3s',
                     '&:hover': {
                         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
                     },
                 }}>
-                    <div style={{ display: 'flex' }}>
+                    <div style={{ display: 'flex',alignItems:'center',height:'100%' }}>
                         <div style={{ padding: 10,flex:1 }}>
                             <Typography variant={'h6'} color={'#fff'}>{title}</Typography>
                             <Typography variant='h3' flex={1} color={'#fff'}>

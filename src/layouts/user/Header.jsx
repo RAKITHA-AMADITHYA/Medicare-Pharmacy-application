@@ -99,76 +99,18 @@ function Header() {
         </Grid>
 
         <Grid item xs={1} p={1} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+        <Link to={'/user/my-orders'}>
+
           <Avatar sx={{ bgcolor: '#e3f0ff' }} onClick={handleMessagePopoverOpen}>
             <MessageIcon />
           </Avatar>
-          <Popover
-            open={openMessage}
-            anchorEl={messagePopover}
-            onClose={handlePopoverClose}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'center',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'center',
-            }}
-          >
-            {/* Your message icon dropdown content here */}
-            <Grid container p={3} display={'flex'} justifyContent={'space-between'} spacing={5}>
-              <Grid item xs={2} display={'flex'} justifyContent={'center'}>
+        </Link>  
 
-                <Avatar alt="Medicare" src="/static/images/avatar/1.jpg"></Avatar>
-              </Grid>
-              <Grid item display={'flex'} alignItems={'center'} xs={10}>
-
-                <Typography variant="subtitle2">Your Order Has Delivered</Typography>
-              </Grid>
-
-
-              <Divider sx={{ my: 1, width: '100%', display: 'flex', justifyContent: 'center' }} />
-            </Grid>
-
-          </Popover>
-
+<Link to={'/user/buy-now'}>
           <Avatar sx={{ bgcolor: '#e3f0ff' }} onClick={handleCartPopoverOpen}>
             <ShoppingCartIcon />
           </Avatar>
-          <Popover sx={{maxHeight:300,overflowY:'auto'}}
-            open={openCart}
-            anchorEl={cartPopover}
-            onClose={handlePopoverClose}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'center',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'center',
-            }}
-          >
-            {/* Your shopping cart icon dropdown content here */}
-            <Grid container p={3} justifyContent="center">
-              <Grid item xs={2} display="flex" justifyContent="center">
-                <Avatar alt="Medicare" src={inhailer} />
-              </Grid>
-              <Grid item xs={7} display="flex" justifyContent="center" flexDirection="column" textAlign="center">
-                <Typography variant="body1">SEROFLO-125 INHALER</Typography>
-              </Grid>
-              <Grid item xs={3} display="flex" justifyContent="center" alignItems={'start'}>
-                <Typography variant="body1">650/=</Typography>
-              </Grid>
-              
-            </Grid>
-            
-           
-              <Link to={'/user/buy-now'} style={{textDecoration:'none'}}>
-            <Grid item xs={12}m={1} display="flex" justifyContent="center">
-                <Button fullWidth variant="outlined">Proceed to Checkout</Button>
-              </Grid>
-              </Link>
-          </Popover>
+        </Link>
 
         </Grid>
 
